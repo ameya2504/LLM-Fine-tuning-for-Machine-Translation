@@ -5,8 +5,7 @@ A practical experiment exploring parameter-efficient fine-tuning of BLOOMZ-1B7 f
 
 The project investigates how different training-data strategies affect translation quality under limited GPU resources.
 
-Project Overview
-
+**Project Overview**
 The goal was to fine-tune a pretrained multilingual language model for German-to-French translation and evaluate whether additional synthetic training data could improve performance.
 
 The experiments compare four model configurations:
@@ -19,8 +18,7 @@ Model D	LoRA fine-tuning on combined data	27.28
 
 The best-performing experiment improved the BLEU score from 22.51 to 32.96 using synthetic-data fine-tuning.
 
-Key Findings
-
+**Key Findings**
 The experiments produced an interesting result: conventional fine-tuning on the limited original training dataset did not improve the baseline.
 
 Model B achieved **21.80 BLEU**, compared with **22.51 BLEU** for the pretrained model.
@@ -32,6 +30,7 @@ Combining original and synthetic data produced **27.28 BLEU**, which was better 
 These results highlight how training-data composition can have a significant impact on LLM fine-tuning performance, particularly when working with relatively small datasets.
 
 **Approach**
+
 **1. Dataset Preparation**
 The project uses the Tatoeba German–French translation dataset.
 A subset of 1,000 translation pairs was sampled and divided into training and testing data using an 80/20 split.
